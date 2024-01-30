@@ -50,7 +50,7 @@ const setSavedPlace = (place) => {
 const renderHistoryButtons = () => {
     savedHistorial.empty();
     for (let i = 0; i < searchHistory.length && i < 5; i++) {
-      const historyBtn = $("<button class='btn btn-secondary mb-2'>").text(searchHistory[i]);
+      const historyBtn = $("<button class='btn btn-secondary mb-2'>").text(searchHistory[i].toUpperCase());
       historyBtn.on("click", function () {
         searchInput.val(searchHistory[i]);
         findCityWeather();
