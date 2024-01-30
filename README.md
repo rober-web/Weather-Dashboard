@@ -12,6 +12,10 @@ This project is a weather dashboard that allows users to check the current and f
 
 [Ranjan-Beginner's Guide](https://www.youtube.com/watch?v=QEu8_5bYm-w&ab_channel=Ranjan-Beginner%27sGuide): Working with the 5 days weather forecast api.
 
+[CSS Gradient](https://cssgradient.io/): To set gradient background colours.
+
+[CSS Generator](https://cssgenerator.org/): To generate nice shadow effects.
+
 ## Instructions
 
 1. Enter the city name for which you want to check the weather in the search input.
