@@ -1,6 +1,3 @@
-/* body{
-    background-color: red !important;
-} */
 
 header {
   background: rgb(8,2,122);
@@ -14,25 +11,24 @@ header {
 
 }
 
-.display {
-  
+#display-today {
+ padding:0;
 }
 
-.display-child {
-}
+
 
 #today {
-  width: 50%;
-  padding: 20px;
-  border-radius: 20px;
-
-  background: rgb(2,0,36);
-  background: linear-gradient(141deg, rgba(2,0,36,1) 0%, rgba(242,186,126,1) 0%, rgba(242,213,181,1) 44%, rgba(242,232,210,1) 77%, rgba(242,231,215,1) 100%);
-
-  box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 1);
-  -webkit-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 1);
-}
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+  
+    background: rgb(2,0,36);
+    background: linear-gradient(141deg, rgba(2,0,36,1) 0%, rgba(242,186,126,1) 0%, rgba(242,213,181,1) 44%, rgba(242,232,210,1) 77%, rgba(242,231,215,1) 100%);
+  
+    box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 1);
+  }
 
 #today h3 {
     text-transform: capitalize;
@@ -78,4 +74,18 @@ header {
 
 button[type="submit"] {
   width: 100%;
+}
+
+
+@media (max-width: 575.98px) {
+    #today {
+        width: 100%;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    #today{
+        width:100%;
+    }
 }
