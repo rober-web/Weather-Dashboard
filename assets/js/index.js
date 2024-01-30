@@ -8,42 +8,53 @@ let forecastData = $("#forecast");
 let searchInput = $("#searchInput");
 let searchButton = $("#searchButton");
 let today = $("#today");
-//let city = "London";
 let inputGroupAppend = $("#input-group-append ");
 let savedHistorial = $("#historial");
 let searchHistory = [];
 let setPlace;
-//let getPlace;
+
 // 1. Create the function to call the cities
 
+// Function to get the history of cities searched
 const getHistorial = () => {
   const theHistorial = localStorage.getItem("savedSearchHistorial");
   return theHistorial ? JSON.parse(theHistorial) : [];
 };
 
 const setHistorial = () => {
-    localStorage.setItem("savedSearchHistorial", JSON.stringify(searchHistory.slice(0, 5))); // Store the entire array
+  // remove duplicates
+    let sh = removeDuplicates(searchHistory); 
+
+    // Store the entire array and slice to the specified limit number (in this case 5)
+    // And add it to the localStorage
+    localStorage.setItem("savedSearchHistorial", JSON.stringify(sh.slice(0, 5))); 
 };
 
+
+// Function to remove duplicated items from the search history array
+const removeDuplicates = (arr) => {
+  return arr.filter((item,
+      index) => arr.indexOf(item) === index);
+}
+
+// Function to retrieve the places from the local storage
 const getSavedPlace = () => {
     const savedPlace = JSON.parse(localStorage.getItem("place"));
-    return savedPlace ? savedPlace : "London"; // Default to 'London' if no place is found
+    
+    // Default to 'London' if no place is found
+    return savedPlace ? savedPlace : "London"; 
 };
 
-// Function to set the place in localStorage//localStorage.setItem("place", JSON.stringify(setPlace));
-
+// Function to set searched places individually to the localStorage
 const setSavedPlace = (place) => {
     if (searchInput.val().trim() !== "") {
         setPlace = searchInput.val();
         localStorage.setItem("place", JSON.stringify(setPlace))
         searchHistory.unshift(setPlace);
+        
         setHistorial();
-        //renderHistoryButtons();
-      }
-  // Retrieve the updated searchHistory from localStorage
-/*   searchHistory = getHistorial();
 
-  savedHistorial.append(searchHistory); */
+      }
 };
 
 // Function to render history buttons
@@ -52,8 +63,9 @@ const renderHistoryButtons = () => {
     for (let i = 0; i < searchHistory.length && i < 5; i++) {
       const historyBtn = $("<button class='btn btn-secondary mb-2'>").text(searchHistory[i].toUpperCase());
       historyBtn.on("click", function () {
-        searchInput.val(searchHistory[i]);
-        findCityWeather();
+         
+        findCityWeather(searchHistory[i]);
+
       });
 
       
