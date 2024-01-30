@@ -30,6 +30,9 @@ header {
   -moz-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 1);
 }
 
+#today h3 {
+    text-transform: capitalize;
+}
 
 .five-day {
   border-radius: 10px;
@@ -42,6 +45,7 @@ header {
   gap: 10px;
   color: white !important;
 }
+
 
 .five-day-row {
   display: flex !important;
