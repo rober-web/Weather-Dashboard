@@ -3,7 +3,9 @@
 } */
 
 header {
-  background-color: rgb(169, 169, 196) !important;
+  background: rgb(8,2,122);
+  background: linear-gradient(180deg, rgba(8,2,122,1) 0%, rgba(44,45,45,1) 0%, rgba(18,42,60,1) 37%, rgba(9,89,149,1) 100%);
+    color: white;
 }
 
 .search {
