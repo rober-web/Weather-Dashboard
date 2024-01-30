@@ -9,7 +9,9 @@ header {
 }
 
 .search {
-  background-color: rgba(191, 221, 248, 0.578);
+    background: rgb(2,0,36);
+  background: linear-gradient(141deg, rgba(2,0,36,1) 0%, rgba(242,186,126,1) 0%, rgba(242,213,181,1) 44%, rgba(242,232,210,1) 77%, rgba(242,231,215,1) 100%);
+
 }
 
 .display {
