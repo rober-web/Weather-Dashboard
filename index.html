@@ -28,61 +28,43 @@
         <form id="search-form" class="form">
           <div class="form-inline form-group">
             <div class="input-group">
-              <input class="form-input weather-search" type="text" id="search-input" placeholder="London"
+              <input class="form-input weather-search" type="text" id="searchInput" 
                 aria-labelledby="form-heading" aria-controls="today forecast" />
-              <div class="input-group-append">
-                <button type="submit" class="btn btn-success search-button" id="search-button" aria-label="submit search">
+              <div class="input-group-append" id="input-group-append">
+                <button type="submit" class="btn btn-success search-button" id="searchButton" aria-label="submit search" >
                   Search
                 </button>
                 <hr class="hr weather-hr" />
+<!--                 <button type="submit" class="btn btn-success search-button" id="searchButton" aria-label="submit search" >
+                  Rio de Janeiro
+                </button>
+                <button type="submit" class="btn btn-success search-button" id="searchButton" aria-label="submit search" >
+                  São Paulo
+                </button>
+                <button type="submit" class="btn btn-success search-button" id="searchButton" aria-label="submit search" >
+                  Curitiba
+                </button> -->
               </div>
             </div>
           </div>
         </form>
-        <div class="list-group" id="history"></div>
+        <div class="list-group" id="historial"></div>
       </aside>
 
-      <div class="col-lg-9 pb-3 display">
-        <section id="today" class="row mt-3" role="region" aria-live="polite">
-          <h3>London (14/09/2022)</h3>
-          <p>Temperature: 13.63ª</p>
-          <p>Wind: 1.7 KPH</p>
-          <p>Humidity: 84%</p>
-        </section>
-        <section id="forecast" class="row mt-3" role="region" aria-live="polite">
+      <div class="col-lg-9 pb-3  display">
+        <div class="d-flex justify-content-center display-child text-center">
+          <section id="today" class="row mt-3 " role="region" aria-live="polite">
+            <h3><!-- London (14/09/2022) --></h3>
+            <div  class="d-flex justify-content-center"><img width="80"></div>
+            <p><!-- Temperature: 13.63ª --></p>
+            <p><!-- Wind: 1.7 KPH --></p>
+            <p><!-- Humidity: 84% --></p>
+          </section>
+        </div>
+
+        <section id="forecast" class="row d-flex justify-content-center mt-3 " role="region" aria-live="polite">
           <h3>5 Day Forecast</h3>
-          <div class="row five-day-row p-3">
-            <div class="col five-day">
-              <h5>15/09/2022</h5>
-              <p>Temperature: 13.63ª</p>
-              <p>Wind: 1.7 KPH</p>
-              <p>Humidity: 84%</p>
-            </div>
-            <div class="col five-day">
-              <h5>16/09/2022</h5>
-              <p>Temperature: 13.63ª</p>
-              <p>Wind: 1.7 KPH</p>
-              <p>Humidity: 84%</p>
-            </div>
-            <div class="col five-day">
-              <h5>17/09/2022</h5>
-              <p>Temperature: 13.63ª</p>
-              <p>Wind: 1.7 KPH</p>
-              <p>Humidity: 84%</p>
-            </div>
-            <div class="col five-day">
-              <h5>18/09/2022</h5>
-              <p>Temperature: 13.63ª</p>
-              <p>Wind: 1.7 KPH</p>
-              <p>Humidity: 84%</p>
-            </div>
-            <div class="col five-day">
-              <h5>19/09/2022</h5>
-              <p>Temperature: 13.63ª</p>
-              <p>Wind: 1.7 KPH</p>
-              <p>Humidity: 84%</p>
-            </div>
-          </div>
+          <div></div>
         </section>
       </div>
     </div>
