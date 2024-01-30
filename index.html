@@ -13,14 +13,14 @@
 </head>
 
 <body>
-  <header class="container-fluid text-center  p-5 weather-header"><!-- text-white bg-dark -->
+  <header class="container-fluid text-center  p-5 weather-header">
     <h1>Weather Dashboard</h1>
   </header>
 
   <!-- max-width for ultra wide resolutions -->
-  <div class="container-fluid" ><!-- style="max-width: 1400px" -->
+  <div class="container-fluid">
     <div class="row">
-      <aside class="col-lg-3 p-4 search">
+      <aside class="col-xs-12 col-lg-3 p-4 search">
         <h2 id="form-heading" class="mt-1 h5 form-label">
           Search for a City:
         </h2>
@@ -28,22 +28,14 @@
         <form id="search-form" class="form">
           <div class="form-inline form-group">
             <div class="input-group">
-              <input class="form-input weather-search" type="text" id="searchInput" 
-                aria-labelledby="form-heading" aria-controls="today forecast" />
+              <input class="form-input weather-search" type="text" id="searchInput" aria-labelledby="form-heading"
+                aria-controls="today forecast" />
               <div class="input-group-append" id="input-group-append">
-                <button type="submit" class="btn btn-success search-button" id="searchButton" aria-label="submit search" >
+                <button type="submit" class="btn btn-success search-button" id="searchButton"
+                  aria-label="submit search">
                   Search
                 </button>
                 <hr class="hr weather-hr" />
-<!--                 <button type="submit" class="btn btn-success search-button" id="searchButton" aria-label="submit search" >
-                  Rio de Janeiro
-                </button>
-                <button type="submit" class="btn btn-success search-button" id="searchButton" aria-label="submit search" >
-                  São Paulo
-                </button>
-                <button type="submit" class="btn btn-success search-button" id="searchButton" aria-label="submit search" >
-                  Curitiba
-                </button> -->
               </div>
             </div>
           </div>
@@ -51,11 +43,11 @@
         <div class="list-group" id="historial"></div>
       </aside>
 
-      <div class="col-lg-9 pb-3  display">
-        <div class="d-flex justify-content-center display-child text-center">
+      <div class="col-lg-9   display">
+        <div class=" d-flex justify-content-center display-child text-center" id="display-today">
           <section id="today" class="row mt-3 " role="region" aria-live="polite">
             <h3><!-- London (14/09/2022) --></h3>
-            <div  class="d-flex justify-content-center"><img width="80"></div>
+            <div class="d-flex justify-content-center"><img width="80"></div>
             <p><!-- Temperature: 13.63ª --></p>
             <p><!-- Wind: 1.7 KPH --></p>
             <p><!-- Humidity: 84% --></p>
